@@ -1,0 +1,24 @@
+{
+  "name": "short-links",
+  "version": "1.0.0",
+  "description": "App for making short links",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "short",
+    "links"
+  ],
+  "author": "Pavel Protchenko <protchenkopa@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2"
+  }
+}
