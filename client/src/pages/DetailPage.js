@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const DetailPage = () => {
-  <div>
+  return(
     <h1>Detail Page</h1>
-  </div>
+  )
 }
