@@ -81,7 +81,7 @@ router.post('/login',
 
     res.json({ token, userId: user.id })
   } catch (error) {
-    res.status(400).json({ message: 'Something went wrong, try again later' })
+    res.status(500).json({ message: 'Something went wrong, try again later' })
   }
 })
 

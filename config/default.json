@@ -1,5 +1,6 @@
 {
   "port": 5000,
   "mongoUri": "mongodb://localhost:27017",
-  "jwtSecret": "kukenage"
+  "jwtSecret": "kukenage",
+  "baseUrl": "http://localhost:5000"
 }
