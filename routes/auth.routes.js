@@ -14,6 +14,7 @@ router.post('/register',
   ],
   async (req, res) => {
   try {
+    console.log(req.body)
     const errors = validationResult(req)
 
     if (!errors.isEmpty) {
@@ -79,7 +80,7 @@ router.post('/login',
     )
 
     res.json({ token, userId: user.id })
-  } catch (e) {
+  } catch (error) {
     res.status(400).json({ message: 'Something went wrong, try again later' })
   }
 })
