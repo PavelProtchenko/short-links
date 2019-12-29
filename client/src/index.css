@@ -17,3 +17,11 @@ input.yellow-input:focus {
 input.yellow-input:focus + label {
   color: #ffeb3b!important;
 }
+
+/* Custom styles for badge */
+.custom-badge {
+  background-color: #e040fb;
+  border-radius: 50%;
+  color: #fff;
+  padding: 7px 7px 7px 7px;
+}
