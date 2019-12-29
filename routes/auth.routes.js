@@ -8,7 +8,7 @@ const User = require('../models/User')
 
 router.post('/register',
   [
-    check('email', 'Invalid email').isEmail(),
+    check('email', 'Invalid email').normalizeEmail().isEmail(),
     check('password', 'Invalid password, minimum 6 characters')
       .isLength({ min: 6 })
   ],
@@ -17,7 +17,7 @@ router.post('/register',
     console.log(req.body)
     const errors = validationResult(req)
 
-    if (!errors.isEmpty) {
+    if (!errors.isEmpty()) {
       return res.status(400).json({
         errors: errors.array(),
         message: 'Invalid registration data'
@@ -53,7 +53,7 @@ router.post('/login',
   try {
     const errors = validationResult(req)
 
-    if (!errors.isEmpty) {
+    if (!errors.isEmpty()) {
       return res.status(400).json({
         errors: errors.array(),
         message: 'Invalid login data'
